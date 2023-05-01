@@ -27,10 +27,17 @@ public class BinaryTree <T extends Comparable<T>> {
                     return;
                 }
                 currentPointer = currentPointer.nextL;
+<<<<<<< HEAD
         /*
          * the value is greater than zero, the current pointer is next to right
          * when the value is greater , the current pointer creates the new node next to right
          */
+=======
+                /*
+                 * the value is greater than zero, the current pointer is next to right
+                 * when the value is greater , the current pointer creates the new node next to right
+                 */
+>>>>>>> UC1_CreateBSTByAdding
             } else {
                 if (currentPointer.nextR == null) {
                     currentPointer.nextR = newNode;
