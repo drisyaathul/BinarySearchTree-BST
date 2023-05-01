@@ -20,5 +20,7 @@ public class BinaryTreeMain {
         binaryTree.add(63);
         binaryTree.add(67);
         binaryTree.display(binaryTree.root);
+        System.out.println();
+        binaryTree.search(binaryTree.root,63);
     }
 }
