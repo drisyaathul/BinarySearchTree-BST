@@ -16,26 +16,28 @@ public class BinaryTree <T extends Comparable<T>> {
         }
         /*
          * When the current pointer is in the root;
-         * when the value is less than zero, the current pointer is next to left
-         * otherwise the pointer is next to right.
+         * the value is less than zero, the current pointer is next to left
+         * when the value is less , the current pointer creates the new node next to left
          */
-        INode<T> currentPointer= root;
-        while(currentPointer.nextL != null && currentPointer.nextR != null) {
-
+        INode<T> currentPointer = root;
+        while (true) {
             if (data.compareTo(currentPointer.data) < 0) {
+                if (currentPointer.nextL == null) {
+                    currentPointer.nextL = newNode;
+                    return;
+                }
                 currentPointer = currentPointer.nextL;
+                /*
+                 * the value is greater than zero, the current pointer is next to right
+                 * when the value is greater , the current pointer creates the new node next to right
+                 */
             } else {
+                if (currentPointer.nextR == null) {
+                    currentPointer.nextR = newNode;
+                    return;
+                }
                 currentPointer = currentPointer.nextR;
             }
-        }
-        /*
-         * when the value is less , the current pointer creates the new node next to left
-         * * when the value is greater , the current pointer creates the new node next to right
-         */
-        if(data.compareTo(currentPointer.data) < 0) {
-            currentPointer.nextL = newNode;
-        } else {
-            currentPointer.nextR = newNode;
         }
     }
     public void display(INode<T> currentPointer){
