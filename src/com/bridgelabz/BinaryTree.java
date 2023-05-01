@@ -48,6 +48,8 @@ public class BinaryTree <T extends Comparable<T>> {
     }
 
     public void display(){
+
         traverse(root);
+
     }
 }
