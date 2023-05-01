@@ -38,18 +38,12 @@ public class BinaryTree <T extends Comparable<T>> {
             currentPointer.nextR = newNode;
         }
     }
-    public void traverse(INode<T> currentPointer){
+    public void display(INode<T> currentPointer){
 
         if (currentPointer == null)
             return;
-        traverse(currentPointer.nextL);
+        display(currentPointer.nextL);
         System.out.print(currentPointer.data+" ");
-        traverse(currentPointer.nextR);
-    }
-
-    public void display(){
-
-        traverse(root);
-
+        display(currentPointer.nextR);
     }
 }

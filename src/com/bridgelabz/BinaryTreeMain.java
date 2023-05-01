@@ -6,6 +6,6 @@ public class BinaryTreeMain {
         binaryTree.add(56);
         binaryTree.add(30);
         binaryTree.add(70);
-        binaryTree.display();
+        binaryTree.display(binaryTree.root);
     }
 }
